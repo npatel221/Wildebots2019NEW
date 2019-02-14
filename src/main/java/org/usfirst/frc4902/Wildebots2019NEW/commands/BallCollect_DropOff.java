@@ -43,7 +43,7 @@ public class BallCollect_DropOff extends Command {
     // Called repeatedly when this Command is scheduled to run
     @Override
     protected void execute() {
-        Robot.ballMechanism.periodic();
+        Robot.ballMechanism.periodic(); // Call Periodic to Execute command every time
     }
 
     // Make this return true when this Command no longer needs to run execute()
@@ -55,11 +55,13 @@ public class BallCollect_DropOff extends Command {
     // Called once after isFinished returns true
     @Override
     protected void end() {
+        Robot.ballMechanism.end(); // Call the End Method and Stop the Motors
     }
 
     // Called when another command which requires one or more of the same
     // subsystems is scheduled to run
     @Override
     protected void interrupted() {
+        end(); // If interrupted set the speed to 0
     }
 }

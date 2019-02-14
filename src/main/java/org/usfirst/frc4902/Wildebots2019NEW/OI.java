@@ -65,8 +65,8 @@ public class OI {
 
         xBox360Controller = new Joystick(0);
         
-        joystickButton1 = new JoystickButton(xBox360Controller, 1);
-        joystickButton1.whileHeld(new BallCollect_DropOff());
+        joystickButton1 = new JoystickButton(xBox360Controller, 1); // Button # 1 means Button A on xBox360 Controller
+        joystickButton1.whileHeld(new BallCollect_DropOff()); // While the Button is pressed it will execute the command
 
 
         // SmartDashboard Buttons

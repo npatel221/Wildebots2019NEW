@@ -45,7 +45,7 @@ public class ArcadeDrive extends Command {
     // Called repeatedly when this Command is scheduled to run
     @Override
     protected void execute() {
-        Robot.driveTrain.drive(Robot.oi.xBox360Controller);
+        Robot.driveTrain.drive(Robot.oi.xBox360Controller); // Enable the Drive Train Motors
 
     }
 
@@ -58,7 +58,7 @@ public class ArcadeDrive extends Command {
     // Called once after isFinished returns true
     @Override
     protected void end() {
-        Robot.driveTrain.end();
+        Robot.driveTrain.end(); // Call the End method and Stop the Motors
     }
 
     // Called when another command which requires one or more of the same
@@ -66,6 +66,6 @@ public class ArcadeDrive extends Command {
     @Override
     protected void interrupted() 
     {
-        end();
+        end(); // If the command is interrupted, call the end method and stop the drive train motors
     }
 }
