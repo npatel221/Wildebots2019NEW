@@ -38,12 +38,13 @@ public class BallCollect_DropOff extends Command {
     // Called just before this Command runs the first time
     @Override
     protected void initialize() {
+        Robot.ballMechanism.drive(0.0);
     }
 
     // Called repeatedly when this Command is scheduled to run
     @Override
     protected void execute() {
-        Robot.ballMechanism.periodic(); // Call Periodic to Execute command every time
+        Robot.ballMechanism.drive(1.0);
     }
 
     // Make this return true when this Command no longer needs to run execute()
