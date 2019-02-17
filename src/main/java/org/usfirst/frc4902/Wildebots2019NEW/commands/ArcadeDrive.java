@@ -45,7 +45,7 @@ public class ArcadeDrive extends Command {
     // Called repeatedly when this Command is scheduled to run
     @Override
     protected void execute() {
-        Robot.driveTrain.drive(Robot.oi.xBox360Controller); // Enable the Drive Train Motors
+        Robot.driveTrain.drive(Robot.oi.getmy_Xbox360Controller()); // Enable the Drive Train Motors
     }
 
     // Make this return true when this Command no longer needs to run execute()

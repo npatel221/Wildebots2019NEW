@@ -10,6 +10,7 @@
 
 
 package org.usfirst.frc4902.Wildebots2019NEW.commands;
+import edu.wpi.first.wpilibj.GenericHID.Hand;
 import edu.wpi.first.wpilibj.command.Command;
 import org.usfirst.frc4902.Wildebots2019NEW.Robot;
 
@@ -44,7 +45,7 @@ public class BallCollect_DropOff extends Command {
     // Called repeatedly when this Command is scheduled to run
     @Override
     protected void execute() {
-        Robot.ballMechanism.drive(1.0);
+        Robot.ballMechanism.drive(Robot.oi.getmy_Xbox360Controller().getY(Hand.kRight));
     }
 
     // Make this return true when this Command no longer needs to run execute()
