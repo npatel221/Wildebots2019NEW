@@ -46,6 +46,17 @@ public class BallCollect_DropOff extends Command {
     @Override
     protected void execute() {
         Robot.ballMechanism.drive(Robot.oi.getmy_Xbox360Controller().getY(Hand.kRight));
+
+        /* THIS NEEDS TO BE TESTED */
+        // This is a redundant code in case if the Right Side Stick fails or the operator requires full control to have Motor ON or OFF
+        if(Robot.oi.my_Xbox360Controller.getBButton())
+        {
+            Robot.ballMechanism.drive(1.0); // Full Speed PWM FWD, Ball Intake
+        }
+        if(Robot.oi.my_Xbox360Controller.getXButton())
+        {
+            Robot.ballMechanism.drive(-1.0); // Full Speed PWM BKWD, Ball Intake Reverse Motor
+        }
     }
 
     // Make this return true when this Command no longer needs to run execute()
