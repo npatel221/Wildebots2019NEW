@@ -45,7 +45,6 @@ public class BallCollect_DropOff extends Command {
     // Called repeatedly when this Command is scheduled to run
     @Override
     protected void execute() {
-        Robot.ballMechanism.drive(Robot.oi.getmy_Xbox360Controller().getY(Hand.kRight));
 
         /* THIS NEEDS TO BE TESTED */
         // This is a redundant code in case if the Right Side Stick fails or the operator requires full control to have Motor ON or OFF
