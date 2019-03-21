@@ -89,7 +89,7 @@ public class DriveTrain extends Subsystem {
     // This method turns on the drive train motors appropriately by getting the X and Y Axis inputs from Joystick.
     public void drive(XboxController stick)
     {
-        differentialDrive.arcadeDrive(stick.getY(Hand.kLeft), stick.getX(Hand.kLeft));
+        differentialDrive.arcadeDrive(stick.getY(Hand.kLeft), -1.0*stick.getX(Hand.kLeft));
     }
 
     // This method stops the motors by setting the speeds to 0.
